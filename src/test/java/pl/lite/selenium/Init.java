@@ -5,15 +5,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Init {
 
-	static WebDriver driver;
+	static WebDriver driver=null;
 
 	public static WebDriver getDriver() {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\programiki\\chromedriver_win32\\chromedriver.exe");
-
+		if(driver==null) {
+		
 		driver = new ChromeDriver();
 		driver.get("http://newtours.demoaut.com");
 		return driver;
+		}else {
+			return driver;
+		}
 
 	}
 
@@ -29,6 +33,7 @@ public class Init {
 	
 	public static void close() {
 		driver.quit();
+		driver=null;
 	}
 	
 	
