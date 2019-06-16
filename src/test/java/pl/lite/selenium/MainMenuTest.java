@@ -31,7 +31,7 @@ public class MainMenuTest {
 		System.out.println("wewnatrz metody start -@before");
 		driver=Init.getDriver();		
 	}
-	@Ignore //do chwilowego zblokowania wykonywania testu
+	//@Ignore //do chwilowego zblokowania wykonywania testu
 	@Test
 	public void mainMenu() {
 				
@@ -65,12 +65,14 @@ public class MainMenuTest {
 		
 		title=driver.getTitle();
 		System.out.println(title);
+		Init.printScr(driver, "mainMenu", "MenuOnly");
 		
 		Assert.assertTrue("Page title is wrong", title.equals("Find a Flight: Mercury Tours:"));
 		Init.sleep(5);
 		
 		
 	}
+	@Ignore
 	@Test
 	public void reservationTest() { 
 		mp.signOnLinkClick();
