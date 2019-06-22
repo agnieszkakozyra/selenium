@@ -1,4 +1,4 @@
-package pl.lite.selenium;
+package pl.lait.selenium;
 
 import org.junit.*;
 import org.junit.Test;
@@ -14,7 +14,7 @@ import pageObjects.ReservationPage;
 import pageObjects.ReservationPage2;
 
 import org.openqa.selenium.*;
-
+@Ignore
 public class MainMenuTest {
 	
 	

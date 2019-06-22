@@ -1,4 +1,4 @@
-package pl.lite.selenium;
+package pl.lait.selenium;
 
 import java.io.File;
 import java.io.IOException;
@@ -53,7 +53,7 @@ public class Init {
 		File srcFile = ((TakesScreenshot) driver_tmp).getScreenshotAs(OutputType.FILE);
 
 		try {
-			FileUtils.copyFile(srcFile, new File("target/"+ folderName +"/"+ testName +"-" + milis + ".png"));
+			FileUtils.copyFile(srcFile, new File("target/src-"+ folderName +"/"+ testName +"-" + milis + ".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
